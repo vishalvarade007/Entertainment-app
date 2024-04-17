@@ -4,10 +4,10 @@ const {registeruserController,loginuserController,logoutuserController} = requir
 const {verifyToken} = require("../Middleware/jwtauth");
 
 //to handle user registration
-router.get("/register",registeruserController);
+router.post("/register",registeruserController);
 
 //to handle user login
-router.get("/login",loginuserController);
+router.post("/login",loginuserController);
 
 //to handle user logout
 router.get("/logout",verifyToken,logoutuserController);
