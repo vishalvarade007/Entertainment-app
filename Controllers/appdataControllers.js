@@ -3,7 +3,7 @@ const TvseriesModel = require("../Models/TvseriesModel");
 const UserModel = require("../Models/UserModel");
 
 //controller to get all movies
-exports.MovieController = async(req,res)=>{
+exports.movieController = async(req,res)=>{
      try{
          const moviedata = await MovieModel.find({});
 
@@ -31,7 +31,7 @@ exports.MovieController = async(req,res)=>{
      }
 };
 //controller to get all tvseries
-exports.TvseriesController = async(req,res)=>{
+exports.tvseriesController = async(req,res)=>{
     try{
         const tvseriesdata = await TvseriesModel.find({});
         if(!tvseriesdata){

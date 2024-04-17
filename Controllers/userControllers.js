@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const emailValidator = require("email-validator");
 
+
 //controller for user registration
 exports.registeruserController = async(req,res)=>{
       try{

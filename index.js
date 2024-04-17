@@ -4,6 +4,7 @@ const cors = require("cors");
 const logger = require("morgan");
 const cookieParaser = require("cookie-parser");
 const dotenv = require("dotenv");
+const {createmovieDatabase,createtvseriesDatabase} = require("./CreateDatabase/createdatabase");
 const mongoose = require("mongoose");
 const uri = "mongodb+srv://user2002:vishal2002@cluster0.hty7hh9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.set("strictQuery",false);
@@ -15,8 +16,12 @@ dotenv.config();
 const userRoutes = require("./Routes/userRoutes");
 const appdataRoutes = require("./Routes/appdataroutes");
 const searchRoutes = require("./Routes/searchroutes");
-const morgan = require("morgan");
 
+//creating movie database
+createmovieDatabase();
+
+//creating series database
+createtvseriesDatabase();
 
 
 
@@ -32,7 +37,7 @@ app.use(cookieParaser());
 //routes
 app.use("/api/v1/user",userRoutes);
 app.use("/api/v1/data",appdataRoutes);
-app.use("/api/v1/data",searchRoutes);
+app.use("/api/v1/search",searchRoutes);
 
 const port = 8080;
 
