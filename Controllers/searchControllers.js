@@ -14,7 +14,7 @@ exports.moviesearch = async(req,res)=>{
         }
         res.status(200).send({
             success:true,
-            movoiedata : movies
+            moviedata : movies
         })
      }
      catch(error){
