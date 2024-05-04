@@ -222,24 +222,6 @@ const tvseriesdata = [
       "imdb_link": "https://www.imdb.com/title/tt0944947"
   },
   {
-      "rank": 14,
-      "title": "The World at War",
-      "description": "A groundbreaking 26-part documentary series narrated by the actor Laurence Olivier about the deadliest conflict in history, World War II.",
-      "image": "https://m.media-amazon.com/images/M/MV5BZTIwOWEyMjctMjQwNS00ODZiLThmMWEtYWQ1OWFiYzQ2OWYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_QL75_UX380_CR0,1,380,562_.jpg",
-      "big_image": "https://m.media-amazon.com/images/M/MV5BZTIwOWEyMjctMjQwNS00ODZiLThmMWEtYWQ1OWFiYzQ2OWYwXkEyXkFqcGdeQXVyNjAwNDUxODI@",
-      "genre": [
-          "Documentary",
-          "History",
-          "War"
-      ],
-      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZTIwOWEyMjctMjQwNS00ODZiLThmMWEtYWQ1OWFiYzQ2OWYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_UY67_CR0,0,45,67_AL_.jpg",
-      "rating": 9.2,
-      "id": "top14",
-      "year": "1973-1974",
-      "imdbid": "tt0071075",
-      "imdb_link": "https://www.imdb.com/title/tt0071075"
-  },
-  {
       "rank": 15,
       "title": "Rick and Morty",
       "description": "An animated series that follows the exploits of a super scientist and his not-so-bright grandson.",

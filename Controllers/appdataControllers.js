@@ -1,6 +1,9 @@
 const MovieModel = require("../Models/MoviesModel");
 const TvseriesModel = require("../Models/TvseriesModel");
 const UserModel = require("../Models/UserModel");
+const jwt = require("jsonwebtoken");
+
+
 
 //controller to get all movies
 exports.movieController = async(req,res)=>{
@@ -16,7 +19,7 @@ exports.movieController = async(req,res)=>{
 
          return res.status(200).send({
              moviecount:moviedata.length,
-             sucess:true,
+             success:true,
              message:"movie list",
              moviedata
          })
@@ -188,6 +191,7 @@ exports.trendingmoviesController = async(req,res)=>{
 
         const newUser = {...user.toObject(),bookmarkmovie:bookmarkmovies,bookmarkseries:bookmarkseries};
 
+        
         return res.status(200).send({
             success:true,
             message:"all bookmark found",
@@ -240,7 +244,8 @@ exports.setbookmarkController = async(req,res)=>{
             user.bookmarkseries.push(tvId);
         }
          await user.save();
-        res.status(200).send({
+ 
+        return res.status(200).send({
             success:true,
             message:"movies or series added successfully..",
             movies:user.bookmarkmovies,
@@ -279,7 +284,8 @@ exports.removebookmarkcontroller = async(req,res)=>{
 
           await user.save();
 
-          res.status(200).send({
+        
+          return res.status(200).send({
             success:true,
             message:"bookmark deleted successfully",
             removebookmark

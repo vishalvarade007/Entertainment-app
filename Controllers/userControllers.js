@@ -42,7 +42,9 @@ exports.registeruserController = async(req,res)=>{
 
         return res.status(201).send({
             success:true,
-            message:"User is created..."
+            message:"User is created...",
+            token:token
+            
         });
       }
       catch(error){
@@ -91,11 +93,14 @@ exports.loginuserController = async(req,res)=>{
             maxAge:24*60*60*1000,
             secure:true,
             sameSite:"None"
+            
         });
 
         return res.status(200).send({
             success:true,
-            message:"Login successfully..."
+            message:"Login successfully...",
+            user:user,
+            token:token
         });
 
       }catch(error){
