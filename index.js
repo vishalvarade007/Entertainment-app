@@ -39,7 +39,7 @@ app.use("/api/v1/user",userRoutes);
 app.use("/api/v1/data",appdataRoutes);
 app.use("/api/v1/search",searchRoutes);
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 //mongo connection and starting server
 mongoose
