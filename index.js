@@ -13,7 +13,7 @@ mongoose.set("strictQuery",false);
 dotenv.config();
 
 //router import
-const userRoutes = require("./Routes/userRoutes");
+const userRoutes = require("./Routes/userroutes");
 const appdataRoutes = require("./Routes/appdataroutes");
 const searchRoutes = require("./Routes/searchroutes");
 
