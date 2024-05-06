@@ -116,10 +116,12 @@ exports.loginuserController = async(req,res)=>{
 //controller for user logout
 exports.logoutuserController = async(req,res)=>{
     try{
+        const token = req.headers['authorization'].split(" ")[1];
         res
         .clearCookie("jwt",{secure:true,sameSite:"None"})
         .status(200)
-        .send({success:true,message:"Logout successfully..."});
+        .send({success:true,message:"Logout successfully...",token:token});
+        console.log(token);
     }catch(error){
         return res.status(500).send({success:false,message:"Internal server error"});
     }

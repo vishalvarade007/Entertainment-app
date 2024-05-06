@@ -59,7 +59,7 @@ exports.multisearch = async(req,res)=>{
 
         if(searchData.length === 0){
             return res.status(404).send({
-                success:true,
+                success:false,
                 message:"No results found"
             })
         }
